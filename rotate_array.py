@@ -14,3 +14,10 @@ def rotate(list,k):
     return list
     
 print(rotate([1,2,3,4],1))
+
+
+#Alternate solution
+def rotate(list,k):
+    if k > len(list):
+        k = k % len(list)
+    return list[k:] + list[:k]
